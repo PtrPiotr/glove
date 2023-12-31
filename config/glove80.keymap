@@ -73,7 +73,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_GAMING";
             #binding-cells = <0>;
-            bindings = <&kp F1>, <&to 6>;
+            bindings = <&kp F1>, <&to 4>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&kp F1>, <&to 4>;
         };
     };
 
@@ -127,12 +134,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2    &kp F3   &kp F4    &kp F5                                                                                            &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
+&td_gaming  &kp F2    &kp F3   &kp F4    &kp F5                                                                                            &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
 &kp EQUAL   &kp N1    &kp N2   &kp N3    &kp N4     &kp N5                                                                         &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB     &kp Q     &kp W    &kp E     &kp R      &kp T                                                                          &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC     &kp A     &kp S    &kp D     &kp F      &kp G                                                                          &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp GRAVE   &kp Z     &kp X    &kp C     &kp V      &kp B   &kp LSHFT  &kp LCTRL  &layer_td  &kp LGUI  &kp RCTRL  &td_mouse_layer  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp PG_UP
-&magic 5 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp BSPC   &kp DEL    &kp RALT   &kp RALT  &kp RET    &lt 3 SPACE              &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &kp PG_DN
+&magic 6 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp BSPC   &kp DEL    &kp RALT   &kp RALT  &kp RET    &lt 3 SPACE              &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &kp PG_DN
             >;
         };
 
@@ -149,12 +156,12 @@
 
         mouse_helper {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                     &kp C_REWIND  &kp C_PP    &kp C_FAST_FORWARD  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &td_tab    &kp LC(A)     &kp DELETE  &trans              &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(X)  &kp N7        &kp N8      &kp N9              &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &td_copy   &kp N4        &kp N5      &kp N6              &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &td_paste  &kp N1        &kp N2      &kp N3              &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans             &kp N0        &trans      &trans              &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                     &kp C_REWIND  &kp C_PP   &kp C_FAST_FORWARD  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &td_tab    &kp LC(A)     &kp LC(F)  &trans              &kp DEL  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(X)  &kp N7        &kp N8     &kp N9              &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &td_copy   &kp N4        &kp N5     &kp N6              &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &td_paste  &kp N1        &kp N2     &kp N3              &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans             &kp N0        &trans     &trans              &trans   &trans
             >;
 
             label = "MOUSE_HELPER";
@@ -171,6 +178,17 @@
             >;
         };
 
+        gaming {
+            bindings = <
+&to 0   &trans  &trans  &trans  &trans                                                                         &kp ESC  &kp I   &kp M   &trans  &none
+&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &kp F6
+&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp N1   &kp N2   &kp N3  &kp N4  &kp N5  &kp N6
+&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp TAB  &kp Q    &kp W   &kp E   &kp R   &kp Y
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RCTRL  &kp RSHFT  &trans   &kp A    &kp S   &kp D   &kp F   &kp G
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &kp ENTER  &kp SPACE           &kp Z    &kp X   &kp C   &kp V   &kp B
+            >;
+        };
+
         magic_layer {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                     &none  &none  &none  &none  &bt BT_CLR_ALL
@@ -178,7 +196,7 @@
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 5
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 6
             >;
         };
 
@@ -190,17 +208,6 @@
 &kp N3  &kp N9  &kp N5  &kp N1  &kp N7  &kp N2                                                  &kp N2  &kp N7  &kp N1  &kp N5  &kp N9  &kp N3
 &kp N4  &kp N0  &kp N6  &kp N2  &kp N8  &kp N3  &kp N4  &kp N5  &kp N6  &kp N6  &kp N5  &kp N4  &kp N3  &kp N8  &kp N2  &kp N6  &kp N0  &kp N4
 &kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9  &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
-            >;
-        };
-
-        gaming {
-            bindings = <
-&to 0   &trans  &trans  &trans  &trans                                                                         &kp ESC  &kp I   &kp M   &trans  &none
-&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &kp F6
-&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp N1   &kp N2   &kp N3  &kp N4  &kp N5  &kp N6
-&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp TAB  &kp Q    &kp W   &kp E   &kp R   &kp Y
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RCTRL  &kp RSHFT  &trans   &kp A    &kp S   &kp D   &kp F   &kp G
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &kp ENTER  &kp SPACE           &kp Z    &kp X   &kp C   &kp V   &kp B
             >;
         };
     };
