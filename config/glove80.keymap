@@ -180,12 +180,12 @@
 
         gaming {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans                                                                         &kp ESC  &kp I   &kp M   &trans  &none
-&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &kp F6
-&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp N1   &kp N2   &kp N3  &kp N4  &kp N5  &kp N6
-&trans  &trans  &trans  &trans  &trans  &trans                                                        &kp TAB  &kp Q    &kp W   &kp E   &kp R   &kp Y
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RCTRL  &kp RSHFT  &trans   &kp A    &kp S   &kp D   &kp F   &kp G
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &kp ENTER  &kp SPACE           &kp Z    &kp X   &kp C   &kp V   &kp B
+&to 0   &trans  &trans  &trans  &trans                                                                          &kp H   &kp I   &kp M   &trans  &none
+&trans  &trans  &trans  &trans  &trans  &trans                                                         &kp F1   &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
+&trans  &trans  &trans  &trans  &trans  &trans                                                         &kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
+&trans  &trans  &trans  &trans  &trans  &trans                                                         &kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp RCTRL  &kp RSHFT  &trans   &kp A   &kp S   &kp D   &kp F   &kp G
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans   &kp ENTER  &kp SPACE           &kp Z   &kp X   &kp C   &kp V   &kp B
             >;
         };
 
