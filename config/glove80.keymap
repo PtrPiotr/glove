@@ -73,14 +73,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_GAMING";
             #binding-cells = <0>;
-            bindings = <&kp F1>, <&to 4>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            bindings = <&kp F1>, <&to 4>;
+            bindings = <&kp F1>, <&to 3>;
         };
     };
 
@@ -139,7 +132,7 @@
 &kp TAB     &kp Q     &kp W    &kp E     &kp R      &kp T                                                                          &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC     &kp A     &kp S    &kp D     &kp F      &kp G                                                                          &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp GRAVE   &kp Z     &kp X    &kp C     &kp V      &kp B   &kp LSHFT  &kp LCTRL  &layer_td  &kp LGUI  &kp RCTRL  &td_mouse_layer  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp PG_UP
-&magic 5 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp BSPC   &kp DEL    &kp RALT   &kp RALT  &kp RET    &lt 3 SPACE              &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &kp PG_DN
+&magic 4 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp BSPC   &kp DEL    &kp RALT   &kp RALT  &kp RET    &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &kp PG_DN
             >;
         };
 
@@ -156,26 +149,15 @@
 
         mouse_helper {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                     &kp C_REWIND  &kp C_PP   &kp C_FAST_FORWARD  &kp LC(Z)      &kp LC(LS(Z))
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &td_tab    &kp LC(A)     &kp LC(F)  &trans              &kp BACKSPACE  &kp DELETE
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(X)  &kp N7        &kp N8     &kp N9              &kp LC(S)      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &td_copy   &kp N4        &kp N5     &kp N6              &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &td_paste  &kp N1        &kp N2     &kp N3              &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans             &kp N0        &trans     &trans              &trans         &trans
+&trans  &trans  &trans  &trans  &trans                                                                     &kp C_REWIND  &kp C_PP        &kp C_FAST_FORWARD  &kp LG(Z)      &kp LG(LS(Z))
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(T)  &kp LG(A)     &kp LG(F)       &trans              &kp BACKSPACE  &kp DELETE
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(X)  &kp N7        &kp N8          &kp N9              &kp LG(S)      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(C)  &kp N4        &kp N5          &kp N6              &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(V)  &kp N1        &kp N2          &kp N3              &trans         &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans             &kp N0        &kp LEFT_ARROW  &kp RIGHT           &trans         &trans
             >;
 
             label = "MOUSE_HELPER";
-        };
-
-        symbols {
-            bindings = <
-&trans         &trans         &trans        &trans         &trans                                                                                                    &trans        &trans       &trans     &trans        &trans
-&trans         &kp GRAVE      &kp LS(LPAR)  &kp LS(RPAR)   &kp SEMI      &kp COMMA                                                                         &trans    &trans        &trans       &trans     &trans        &trans
-&kp LS(EXCL)   &kp LS(LBRC)   &kp SQT       &kp LS(DQT)    &kp LS(RBRC)  &kp LS(QMARK)                                                                     &kp SEMI  &trans        &trans       &kp SPACE  &trans        &trans
-&kp LS(POUND)  &kp LS(CARET)  &kp EQUAL     &kp LS(UNDER)  &kp LS(DLLR)  &kp LS(STAR)                                                                      &kp DOT   &kp BSPC      &kp TAB      &kp SPACE  &kp RET       &trans
-&kp LS(TILDE)  &kp LS(LT)     &kp LS(PIPE)  &kp MINUS      &kp LS(GT)    &kp FSLH       &kp BSLH      &kp DOT        &kp LS(STAR)  &trans  &trans  &trans  &kp FSLH  &kp DEL       &kp LS(TAB)  &trans     &trans        &trans
-&kp LS(AT)     &kp LS(AMPS)   &kp LBKT      &kp RBKT       &kp LS(PLUS)                 &kp LS(DLLR)  &kp LS(COLON)  &kp SEMI      &trans  &trans  &trans            &kp LS(LPAR)  &kp LBKT     &kp RBKT   &kp LS(RPAR)  &trans
-            >;
         };
 
         gaming {
@@ -196,7 +178,7 @@
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 6
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 5
             >;
         };
 
