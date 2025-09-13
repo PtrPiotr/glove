@@ -127,12 +127,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&td_gaming  &kp F2    &kp F3   &kp F4    &kp F5                                                                                            &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
-&kp EQUAL   &kp N1    &kp N2   &kp N3    &kp N4     &kp N5                                                                         &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB     &kp Q     &kp W    &kp E     &kp R      &kp T                                                                          &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC     &kp A     &kp S    &kp D     &kp F      &kp G                                                                          &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp GRAVE   &kp Z     &kp X    &kp C     &kp V      &kp B   &kp LSHFT  &kp LCTRL  &layer_td  &kp LGUI  &kp RCTRL  &td_mouse_layer  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp PG_UP
-&magic 4 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp BSPC   &kp DEL    &kp RALT   &kp RALT  &kp RET    &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &kp PG_DN
+&td_gaming  &kp F2    &kp F3   &kp F4    &kp F5                                                                                          &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
+&kp EQUAL   &kp N1    &kp N2   &kp N3    &kp N4     &kp N5                                                                       &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB     &kp Q     &kp W    &kp E     &kp R      &kp T                                                                        &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC     &kp A     &kp S    &kp D     &kp F      &kp G                                                                        &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp GRAVE   &kp Z     &kp X    &kp C     &kp V      &kp B   &kp LSHFT  &kp LCTRL  &layer_td  &kp LGUI  &mo 2    &td_mouse_layer  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp PG_UP
+&magic 4 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp BSPC   &kp DEL    &kp RALT   &kp RALT  &kp RET  &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &kp PG_DN
             >;
         };
 
@@ -149,12 +149,12 @@
 
         mouse_helper {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                     &kp C_REWIND  &kp C_PP        &kp C_FAST_FORWARD  &kp LG(Z)      &kp LG(LS(Z))
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(T)  &kp LG(A)     &kp LG(F)       &trans              &kp BACKSPACE  &kp DELETE
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(X)  &kp N7        &kp N8          &kp N9              &kp LG(S)      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(C)  &kp N4        &kp N5          &kp N6              &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(V)  &kp N1        &kp N2          &kp N3              &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans             &kp N0        &kp LEFT_ARROW  &kp RIGHT           &trans         &trans
+&trans  &trans  &trans  &trans  &trans                                                                     &kp KP_N7    &kp KP_N8        &kp KP_N9  &kp LG(Z)      &kp LG(LS(Z))
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(T)  &kp KP_N4    &kp KP_N5        &kp KP_N6  &kp BACKSPACE  &kp DELETE
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(X)  &kp KP_N1    &kp KP_NUMBER_2  &kp KP_N3  &kp LG(S)      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(C)  &trans       &kp LG(T)        &kp LG(A)  &kp C_AC_SAVE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(C)  &kp K_PASTE  &kp K_COPY       &kp K_CUT  &trans         &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans             &kp N0       &kp LEFT_ARROW   &kp RIGHT  &trans         &trans
             >;
 
             label = "MOUSE_HELPER";
@@ -162,12 +162,12 @@
 
         gaming {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans                                                                          &kp H   &kp I   &kp M   &trans  &none
-&trans  &trans  &trans  &trans  &trans  &trans                                                         &kp F1   &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
-&trans  &trans  &trans  &trans  &trans  &trans                                                         &kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
-&trans  &trans  &trans  &trans  &trans  &trans                                                         &kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ESC  &kp RCTRL  &kp RSHFT  &trans   &kp A   &kp S   &kp D   &kp F   &kp G
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans   &kp ENTER  &kp SPACE           &kp Z   &kp X   &kp C   &kp V   &kp B
+&to 0   &trans     &trans     &trans     &trans                                                                              &kp H   &kp I   &kp M   &trans  &none
+&trans  &trans     &trans     &trans     &trans     &trans                                                          &kp F1   &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
+&trans  &trans     &trans     &trans     &trans     &trans                                                          &kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
+&trans  &kp LC(A)  &kp LC(C)  &kp LC(D)  &kp LC(F)  &trans                                                          &kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T
+&trans  &kp RC(Z)  &kp LC(X)  &kp LC(V)  &kp LC(V)  &trans  &trans  &trans  &trans  &kp ESC  &kp LCTRL  &kp LSHIFT  &kp M    &kp A   &kp S   &kp D   &kp F   &kp G
+&trans  &trans     &trans     &trans     &trans             &trans  &trans  &trans  &trans   &kp ENTER  &kp SPACE            &kp Z   &kp X   &kp C   &kp V   &kp B
             >;
         };
 
