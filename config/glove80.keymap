@@ -157,9 +157,9 @@
         mouse_helper {
             bindings = <
 &trans  &trans     &trans     &trans              &trans                                                                                &kp KP_N7         &kp KP_N8           &kp KP_N9  &kp LG(Z)      &kp LG(LS(Z))
-&trans  &trans     &trans     &trans              &trans         &trans                                                     &none       &kp KP_N4         &kp KP_N5           &kp KP_N6  &kp RC(RS(P))  &kp DELETE
-&trans  &trans     &trans     &trans              &kp RC(R)      &kp RC(T)                                                  &none       &kp KP_N1         &kp KP_NUMBER_2     &kp KP_N3  &kp LC(S)      &trans
-&trans  &kp RC(A)  &kp RC(S)  &kp RC(D)           &kp RC(F)      &trans                                                     &none       &kp KP_N0         &kp LC(T)           &kp LC(A)  &kp C_AC_SAVE  &trans
+&trans  &trans     &trans     &trans              &trans         &trans                                                     &none       &kp KP_N4         &kp KP_N5           &kp KP_N6  &none          &kp DELETE
+&trans  &trans     &trans     &trans              &kp RC(R)      &kp RC(T)                                                  &none       &kp KP_N1         &kp KP_NUMBER_2     &kp KP_N3  &kp LC(LS(P))  &trans
+&trans  &kp RC(A)  &kp RC(S)  &kp RC(D)           &kp RC(F)      &trans                                                     &none       &kp KP_N0         &kp LC(T)           &kp LC(A)  &kp LC(S)      &trans
 &trans  &kp RC(Z)  &kp RC(X)  &kp RC(C)           &kp RC(V)      &trans     &trans  &trans  &trans  &trans  &trans  &trans  &kp K_UNDO  &kp K_PASTE       &kp K_COPY          &kp K_CUT  &kp RC(FSLH)   &trans
 &trans  &trans     &trans     &kp RC(LEFT_ARROW)  &kp RC(RIGHT)             &trans  &trans  &trans  &trans  &trans  &trans              &kp RC(UP_ARROW)  &kp RC(DOWN_ARROW)  &kp RCTRL  &trans         &trans
             >;
@@ -192,12 +192,12 @@
         MacMouseHelper {
             label = "MAC_MOUSE_HELPER";
             bindings = <
-&trans  &trans     &trans     &trans              &trans                                                                                    &kp KP_N7         &kp KP_N8           &kp KP_N9  &kp LG(Z)      &kp LG(LS(Z))
-&trans  &trans     &trans     &trans              &trans         &trans                                                     &none           &kp KP_N4         &kp KP_N5           &kp KP_N6  &kp RG(RS(P))  &kp DELETE
-&trans  &trans     &trans     &trans              &kp RC(R)      &kp RC(T)                                                  &none           &kp KP_N1         &kp KP_NUMBER_2     &kp KP_N3  &kp LG(S)      &trans
-&trans  &kp RC(A)  &kp RC(S)  &kp RC(D)           &kp RC(F)      &trans                                                     &none           &kp KP_N0         &kp LG(T)           &kp LG(A)  &kp C_AC_SAVE  &trans
-&trans  &kp RC(Z)  &kp RC(X)  &kp RC(C)           &kp RC(V)      &trans     &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(K_UNDO)  &kp LG(V)         &kp LG(K_COPY)      &kp LG(X)  &kp RC(FSLH)   &trans
-&trans  &trans     &trans     &kp RC(LEFT_ARROW)  &kp RC(RIGHT)             &trans  &trans  &trans  &trans  &trans  &trans                  &kp RC(UP_ARROW)  &kp RC(DOWN_ARROW)  &kp RCTRL  &trans         &trans
+&trans  &trans     &trans     &trans              &trans                                                                               &kp KP_N7         &kp KP_N8           &kp KP_N9  &kp LG(Z)      &kp LG(LS(Z))
+&trans  &trans     &trans     &trans              &trans         &trans                                                     &none      &kp KP_N4         &kp KP_N5           &kp KP_N6  &none          &kp DELETE
+&trans  &trans     &trans     &trans              &kp RC(R)      &kp RC(T)                                                  &none      &kp KP_N1         &kp KP_NUMBER_2     &kp KP_N3  &kp RG(RS(P))  &trans
+&trans  &kp RC(A)  &kp RC(S)  &kp RC(D)           &kp RC(F)      &trans                                                     &none      &kp KP_N0         &kp LG(T)           &kp LG(A)  &kp RG(S)      &trans
+&trans  &kp RC(Z)  &kp RC(X)  &kp RC(C)           &kp RC(V)      &trans     &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(Z)  &kp LG(V)         &kp LG(C)           &kp LG(X)  &kp RG(FSLH)   &trans
+&trans  &trans     &trans     &kp RC(LEFT_ARROW)  &kp RC(RIGHT)             &trans  &trans  &trans  &trans  &trans  &trans             &kp RC(UP_ARROW)  &kp RC(DOWN_ARROW)  &kp RCTRL  &trans         &trans
             >;
         };
 
