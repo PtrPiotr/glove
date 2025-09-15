@@ -75,6 +75,13 @@
             #binding-cells = <0>;
             bindings = <&kp F1>, <&to 3>;
         };
+
+        td_mac: td_mac {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MAC";
+            #binding-cells = <0>;
+            bindings = <&kp F2>, <&to 4>, <&to 0>;
+        };
     };
 
     macros {
@@ -127,7 +134,7 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&td_gaming  &kp F2    &kp F3   &kp F4    &kp F5                                                                                          &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
+&td_gaming  &td_mac   &kp F3   &kp F4    &kp F5                                                                                          &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
 &kp EQUAL   &kp N1    &kp N2   &kp N3    &kp N4     &kp N5                                                                       &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB     &kp Q     &kp W    &kp E     &kp R      &kp T                                                                        &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC     &kp A     &kp S    &kp D     &kp F      &kp G                                                                        &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
@@ -173,7 +180,7 @@
 
         Mac {
             bindings = <
-&td_gaming  &kp F2    &kp F3   &kp F4    &kp F5                                                                                          &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
+&td_gaming  &td_mac   &kp F3   &kp F4    &kp F5                                                                                          &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
 &kp EQUAL   &kp N1    &kp N2   &kp N3    &kp N4     &kp N5                                                                       &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB     &kp Q     &kp W    &kp E     &kp R      &kp T                                                                        &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC     &kp A     &kp S    &kp D     &kp F      &kp G                                                                        &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
@@ -183,7 +190,7 @@
         };
 
         MacMouseHelper {
-            label = "MOUSE_HELPER";
+            label = "MAC_MOUSE_HELPER";
             bindings = <
 &trans  &trans     &trans     &trans              &trans                                                                                    &kp KP_N7         &kp KP_N8           &kp KP_N9  &kp LG(Z)      &kp LG(LS(Z))
 &trans  &trans     &trans     &trans              &trans         &trans                                                     &none           &kp KP_N4         &kp KP_N5           &kp KP_N6  &kp RG(RS(P))  &kp DELETE
